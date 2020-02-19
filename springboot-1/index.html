@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="theme-color" content="#000">
 <title>第一个SpringBoot Web项目 | yhzdys</title>
-<link rel="shortcut icon" href="http://www.yhzdys.com/favicon.ico?v=1582090878194">
+<link rel="shortcut icon" href="http://www.yhzdys.com/favicon.ico?v=1582101620595">
 <link rel="stylesheet" href="http://www.yhzdys.com/styles/main.css">
 
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -322,7 +322,7 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1098<span class="pc-show">字数</span></span>
+      <span>1092<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
@@ -357,10 +357,10 @@
 
 &lt;/project&gt;
 </code></pre>
-<p> 打开pom.xml并右键，选择“Add as Maven Project”,这样一个最原始的maven项目便创建完成。<br>
+<p> 打开pom.xml并右键，选择“Add as Maven Project”，到这里，一个最简单的maven项目就创建完成了。<br>
 <img src="http://www.yhzdys.com/post-images/1582017172157.png" alt="" loading="lazy"></p>
 <h3 id="第三步声明项目为springboot项目">第三步声明项目为SpringBoot项目</h3>
-<p> 修改第二步新建的pom.xml文件，使这个maven项目继承SpringBoot，并添加SpringBoot启动的web依赖，代码如下：（本文使用SpringBoot的版本为2.2.2.RELEASE，实际可根据需要自由选择）</p>
+<p> 修改pom.xml文件，使这个maven项目继承SpringBoot，并添加SpringBoot启动的web依赖，代码如下：（本文使用SpringBoot的版本为2.2.2.RELEASE，实际可根据需要自由选择）</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
          xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
@@ -395,7 +395,7 @@
     }
 </code></pre>
 <p><img src="http://www.yhzdys.com/post-images/1582015930131.png" alt="" loading="lazy"><br>
- 右键main方法运行，一个最简单的集成tomcat的SpringBoot（默认端口：8080）应用程序便构建启动成功了：<br>
+ 右键main方法运行，一个最精简的SpringBoot Web（默认端口：8080）应用程序便构建启动成功了：<br>
 <img src="http://www.yhzdys.com/post-images/1582016035960.png" alt="" loading="lazy"></p>
 <h3 id="第四步添加一个controller">第四步添加一个Controller</h3>
 <p> SpringBoot默认扫描与“HelloSpringBootApplication”类同级及下级的包，所以切忌不要把代码放到“HelloSpringBootApplication”类的包级别之上（特殊需要除外）<br>
