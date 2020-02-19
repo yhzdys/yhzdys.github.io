@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>http://www.yhzdys.com</id>
     <title>yhzdys</title>
-    <updated>2020-02-19T05:14:18.977Z</updated>
+    <updated>2020-02-19T05:16:25.390Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="http://www.yhzdys.com"/>
+    <link rel="self" href="http://www.yhzdys.com/atom.xml"/>
     <subtitle>&lt;meta name=&quot;baidu-site-verification&quot; content=&quot;fOtxHxXfe6&quot; /&gt;
 &lt;meta name=&quot;google-site-verification&quot; content=&quot;fOfdpox1ADM9LEVloGkDxXeZ517ZhXEMoMnwTMGe8xQ&quot; /&gt;</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>http://www.yhzdys.com/images/avatar.png</logo>
+    <icon>http://www.yhzdys.com/favicon.ico</icon>
     <rights>All rights reserved 2020, yhzdys</rights>
     <entry>
         <title type="html"><![CDATA[使用SpringBoot搭建一个Dubbo服务]]></title>
-        <id>http://localhost:4000/springboot-dubbo-1/</id>
-        <link href="http://localhost:4000/springboot-dubbo-1/">
+        <id>http://www.yhzdys.com/springboot-dubbo-1/</id>
+        <link href="http://www.yhzdys.com/springboot-dubbo-1/">
         </link>
         <updated>2020-02-17T05:38:30.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -30,8 +30,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[SpringBoot+Dubbo使用Nacos注册中心]]></title>
-        <id>http://localhost:4000/springboot-dubbo-nacos-1/</id>
-        <link href="http://localhost:4000/springboot-dubbo-nacos-1/">
+        <id>http://www.yhzdys.com/springboot-dubbo-nacos-1/</id>
+        <link href="http://www.yhzdys.com/springboot-dubbo-nacos-1/">
         </link>
         <updated>2020-02-16T00:45:21.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -47,8 +47,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Java三大特性--封装]]></title>
-        <id>http://localhost:4000/java-fz/</id>
-        <link href="http://localhost:4000/java-fz/">
+        <id>http://www.yhzdys.com/java-fz/</id>
+        <link href="http://www.yhzdys.com/java-fz/">
         </link>
         <updated>2019-03-06T13:08:10.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -139,8 +139,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[第一个SpringBoot Web项目]]></title>
-        <id>http://localhost:4000/springboot-1/</id>
-        <link href="http://localhost:4000/springboot-1/">
+        <id>http://www.yhzdys.com/springboot-1/</id>
+        <link href="http://www.yhzdys.com/springboot-1/">
         </link>
         <updated>2019-03-01T06:55:19.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -159,11 +159,11 @@
   3、Maven：3.X.X</p>
 <h3 id="第一步新建项目">第一步新建项目</h3>
 <p> 打开IDEA，我们可以选择“Create New Project”并使用Spring提供的Spring Initalizr工具初始化一个SpringBoot项目，但是为了更好照顾初学的朋友，并方便介绍maven的相关知识，本文不使用此种构建方式。<br>
-<img src="http://localhost:4000/post-images/1582013349218.png" alt="" loading="lazy"><br>
+<img src="http://www.yhzdys.com/post-images/1582013349218.png" alt="" loading="lazy"><br>
  这里我们新建一个空文件夹，并命名为项目名称，本文以“hello-spring-boot”为例。然后选择IDEA中的“Open”，选择新建的项目文件夹并打开：<br>
-<img src="http://localhost:4000/post-images/1582013589127.png" alt="" loading="lazy"><br>
+<img src="http://www.yhzdys.com/post-images/1582013589127.png" alt="" loading="lazy"><br>
  打开后就可以看到空空如也的项目，在你面前：<br>
-<img src="http://localhost:4000/post-images/1582013969121.png" alt="" loading="lazy"></p>
+<img src="http://www.yhzdys.com/post-images/1582013969121.png" alt="" loading="lazy"></p>
 <h3 id="第二步声明项目为maven项目">第二步声明项目为maven项目</h3>
 <p> 声明一个空项目为maven项目，很简单，我们右键项目目录，选择“New”-&gt;“File”，然后新建一个名为“pom.xml”的文件，并把如下代码复制到pom.xml：</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -177,7 +177,7 @@
 &lt;/project&gt;
 </code></pre>
 <p> 打开pom.xml并右键，选择“Add as Maven Project”,这样一个最原始的maven项目便创建完成。<br>
-<img src="http://localhost:4000/post-images/1582017172157.png" alt="" loading="lazy"></p>
+<img src="http://www.yhzdys.com/post-images/1582017172157.png" alt="" loading="lazy"></p>
 <h3 id="第三步声明项目为springboot项目">第三步声明项目为SpringBoot项目</h3>
 <p> 修改第二步新建的pom.xml文件，使这个maven项目继承SpringBoot，并添加SpringBoot启动的web依赖，代码如下：（本文使用SpringBoot的版本为2.2.2.RELEASE，实际可根据需要自由选择）</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -204,22 +204,22 @@
 &lt;/project&gt;
 </code></pre>
 <p> 接着，我们右键项目文件，选择“New”-&gt;“Directory”，新建名为“src/main/java”的目录，之后再“main”目录下新建名为“resources”的目录，最终效果如下图：<br>
-<img src="http://localhost:4000/post-images/1582014848952.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1582015011777.png" alt="" loading="lazy"><br>
+<img src="http://www.yhzdys.com/post-images/1582014848952.png" alt="" loading="lazy"><br>
+<img src="http://www.yhzdys.com/post-images/1582015011777.png" alt="" loading="lazy"><br>
  最后我们右键“java”目录，选择“New”-&gt;“Package”，新建名为项目groupId的包，本文的是“org.yhzdys.demo”，右键“demo”包，选择“New”-&gt;“Java Class”，新建名为“HelloSpringBootApplication”的类，使用注解“@SpringBootApplication”声明该项目为SpringBoot应用，最终效果如下图：<br>
-<img src="http://localhost:4000/post-images/1582015718813.png" alt="" loading="lazy"><br>
+<img src="http://www.yhzdys.com/post-images/1582015718813.png" alt="" loading="lazy"><br>
  为“HelloSpringBootApplication”类添加main方法作为项目的启动函数，如下图：</p>
 <pre><code>    public static void main(String[] arguments) {
         SpringApplication.run(HelloSpringBootApplication.class, arguments);
     }
 </code></pre>
-<p><img src="http://localhost:4000/post-images/1582015930131.png" alt="" loading="lazy"><br>
+<p><img src="http://www.yhzdys.com/post-images/1582015930131.png" alt="" loading="lazy"><br>
  右键main方法运行，一个最简单的集成tomcat的SpringBoot（默认端口：8080）应用程序便构建启动成功了：<br>
-<img src="http://localhost:4000/post-images/1582016035960.png" alt="" loading="lazy"></p>
+<img src="http://www.yhzdys.com/post-images/1582016035960.png" alt="" loading="lazy"></p>
 <h3 id="第四步添加一个controller">第四步添加一个Controller</h3>
 <p> SpringBoot默认扫描与“HelloSpringBootApplication”类同级及下级的包，所以切忌不要把代码放到“HelloSpringBootApplication”类的包级别之上（特殊需要除外）<br>
  接下来新建名为“web.controller”的包，“New”一个“TestCtroller”类，使用注解“@RestController”声明该类为Controller，并编写第一个测试接口:<br>
-<img src="http://localhost:4000/post-images/1582016410326.png" alt="" loading="lazy"></p>
+<img src="http://www.yhzdys.com/post-images/1582016410326.png" alt="" loading="lazy"></p>
 <pre><code>package org.yhzdys.demo.web.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -236,15 +236,15 @@ public class TestController {
 }
 </code></pre>
 <p> 重新启动我们的项目，在浏览器中输入“http://localhost:8080/hello”，测试一下接口：<br>
-<img src="http://localhost:4000/post-images/1582016515552.png" alt="" loading="lazy"><br>
-<img src="http://localhost:4000/post-images/1582016611048.png" alt="" loading="lazy"><br>
+<img src="http://www.yhzdys.com/post-images/1582016515552.png" alt="" loading="lazy"><br>
+<img src="http://www.yhzdys.com/post-images/1582016611048.png" alt="" loading="lazy"><br>
  接口调用成功，大功告成！！！👏👏👏</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[关于本站]]></title>
-        <id>http://localhost:4000/about/</id>
-        <link href="http://localhost:4000/about/">
+        <id>http://www.yhzdys.com/about/</id>
+        <link href="http://www.yhzdys.com/about/">
         </link>
         <updated>2017-07-18T00:20:48.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
