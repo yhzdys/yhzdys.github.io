@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://localhost:4000</id>
+    <title>yhzdys</title>
+    <updated>2020-02-19T05:14:18.977Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <subtitle>&lt;meta name=&quot;baidu-site-verification&quot; content=&quot;fOtxHxXfe6&quot; /&gt;
+&lt;meta name=&quot;google-site-verification&quot; content=&quot;fOfdpox1ADM9LEVloGkDxXeZ517ZhXEMoMnwTMGe8xQ&quot; /&gt;</subtitle>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
+    <rights>All rights reserved 2020, yhzdys</rights>
+    <entry>
+        <title type="html"><![CDATA[使用SpringBoot搭建一个Dubbo服务]]></title>
+        <id>http://localhost:4000/springboot-dubbo-1/</id>
+        <link href="http://localhost:4000/springboot-dubbo-1/">
+        </link>
+        <updated>2020-02-17T05:38:30.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p> SpringBoot简单整合Dubbo</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p> SpringBoot简单整合Dubbo</p>
+</blockquote>
+<!-- more -->
+<p>loading...</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SpringBoot+Dubbo使用Nacos注册中心]]></title>
+        <id>http://localhost:4000/springboot-dubbo-nacos-1/</id>
+        <link href="http://localhost:4000/springboot-dubbo-nacos-1/">
+        </link>
+        <updated>2020-02-16T00:45:21.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p> Alibaba Nacos为我们的分布式系统提供了一套完整的服务注册与发现、配置和管理的一站式解决方案</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p> Alibaba Nacos为我们的分布式系统提供了一套完整的服务注册与发现、配置和管理的一站式解决方案</p>
+</blockquote>
+<!-- more -->
+<p>load... ...</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Java三大特性--封装]]></title>
+        <id>http://localhost:4000/java-fz/</id>
+        <link href="http://localhost:4000/java-fz/">
+        </link>
+        <updated>2019-03-06T13:08:10.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p> 聊一聊Java三大特性之一：封装</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p> 聊一聊Java三大特性之一：封装</p>
+</blockquote>
+<!-- more -->
+<p><em><strong><strong>自学生时代开始学习Java以来，Java或者说面面向对象编程（OOP）的三大特性：封装、继承、多态，总是被最先提及的，博主工作几年，偶尔静下心来思考，什么是封装，自认为是答不上来，于是狠了狠心，从零开始开始学习Java基础--封装</strong></strong></em></p>
+<hr>
+<p> 封装，字面意思就是包装。实际应用中就是隐藏功能的具体实现，同时也可以减少项目中重复的代码；抽象点说呢，就是把抽象的数据类型（形参）和基于传入数据的操作捆绑在一起，使这一部分代码成为一块不可拆分的整体，隐藏功能的实现细节，只对外暴露最基本的数据需求，并给予简单却又见名知意方法名称。往往这种思想或者说编程手法，我们称之为--封装。</p>
+<p>   使用封装的好处：</p>
+<p>  1、良好的封装能够减少耦合。</p>
+<p>  2、类内部的结构可以自由修改。</p>
+<p>  3、隐藏成员变量的操作。</p>
+<p>  4、隐藏实现细节，简化代码。</p>
+<p> 我们可以看下面的People.java类</p>
+<pre><code class="language-java">public class People {
+
+    private String name;
+
+    private Integer age;
+
+}
+</code></pre>
+<p> 上面people的name、age属性很好的被隐藏在了类的内部，外部代码无法对people的属性进行修改，但是people的属性往往是需要被修改的，不然我们需要它干什么呢，对吧。而要实现可以修改属性的功能，一般有以下两种方案：</p>
+<p>  一、把name和age属性的访问权限改成public：</p>
+<pre><code class="language-java">public class People {
+
+    public String name;
+
+    public Integer age;
+
+}
+</code></pre>
+<p>  二、编写get、set方法：</p>
+<pre><code class="language-java">public class People {
+
+    private String name;
+
+    private Integer age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+}
+</code></pre>
+<p> 显然我们无论是在学习或者工作中，都一致的采用了方案二。原因是方案二对people的访问属性可以有更好的控制以及更好的兼容性。下面我们想一些应用场景，比如说你的业务中明确，people的名字不能被获取，那么这样看来，按照方案一的方式，把name属性的访问权限改成private；而按照方案二的方式，我们需要删除name的get方法，两种方案都能实现上述的要求，但是方案一在实现要求的同时我们同时也失去了name的赋值权限，是不是很头疼；再比如说某一天，咱们的业务场景变动了，比如people的age属性可以存储string形的数据（博主这里只是举个例子），那么按照方案一，我们只需要将age属性的数据类型改成string，但是所有引用到people对象并且给age赋值的代码，都需要修改；而方案二九很好的规避了这个问题，我们只需要像如下代码一样修改相应的get、set方法，便可以兼容所有的赋值代码，是不是很美好。</p>
+<pre><code class="language-java">public class People {
+
+    private String name;
+
+    private String age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return Integer.parseInt(this.age);
+    }
+
+    public void setAge(Integer age) {
+        this.age = age.toString();
+    }
+}
+</code></pre>
+<p> 当然以上只是一个不太恰当的例子，但大致能体现出封装这一特性的优势所在。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第一个SpringBoot Web项目]]></title>
+        <id>http://localhost:4000/springboot-1/</id>
+        <link href="http://localhost:4000/springboot-1/">
+        </link>
+        <updated>2019-03-01T06:55:19.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p> 从零开始学习SpringBoot的使用</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p> 从零开始学习SpringBoot的使用</p>
+</blockquote>
+<!-- more -->
+<p> SpringBoot已成为当今最流行的微服务开发框架之一，本文主要是简单介绍SpringBoot的特点并创建一个最简单的SpringBoot Web项目，一个包含内嵌Web容器（默认使用的是Tomcat）的Jar包。</p>
+<p> 对比之前传统的Spring应用程序，它们往往需要配置大量的XML文件才能运行，而使用SpringBoot只需极少的配置（一些约定俗成的配置都帮你配置好了），就可以快速获得一个正常运行的Spring应用程序，而这些配置使用的都是注解的形式，不再或者很少需要配置XML文件。</p>
+<p> 开发环境：<br>
+  1、JDK：1.8<br>
+  2、IDE：IntelliJ IDEA<br>
+  3、Maven：3.X.X</p>
+<h3 id="第一步新建项目">第一步新建项目</h3>
+<p> 打开IDEA，我们可以选择“Create New Project”并使用Spring提供的Spring Initalizr工具初始化一个SpringBoot项目，但是为了更好照顾初学的朋友，并方便介绍maven的相关知识，本文不使用此种构建方式。<br>
+<img src="http://localhost:4000/post-images/1582013349218.png" alt="" loading="lazy"><br>
+ 这里我们新建一个空文件夹，并命名为项目名称，本文以“hello-spring-boot”为例。然后选择IDEA中的“Open”，选择新建的项目文件夹并打开：<br>
+<img src="http://localhost:4000/post-images/1582013589127.png" alt="" loading="lazy"><br>
+ 打开后就可以看到空空如也的项目，在你面前：<br>
+<img src="http://localhost:4000/post-images/1582013969121.png" alt="" loading="lazy"></p>
+<h3 id="第二步声明项目为maven项目">第二步声明项目为maven项目</h3>
+<p> 声明一个空项目为maven项目，很简单，我们右键项目目录，选择“New”-&gt;“File”，然后新建一个名为“pom.xml”的文件，并把如下代码复制到pom.xml：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;groupId&gt;org.yhzdys.demo&lt;/groupId&gt;
+    &lt;artifactId&gt;hello-spring-boot&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0.RELEASE&lt;/version&gt;
+
+&lt;/project&gt;
+</code></pre>
+<p> 打开pom.xml并右键，选择“Add as Maven Project”,这样一个最原始的maven项目便创建完成。<br>
+<img src="http://localhost:4000/post-images/1582017172157.png" alt="" loading="lazy"></p>
+<h3 id="第三步声明项目为springboot项目">第三步声明项目为SpringBoot项目</h3>
+<p> 修改第二步新建的pom.xml文件，使这个maven项目继承SpringBoot，并添加SpringBoot启动的web依赖，代码如下：（本文使用SpringBoot的版本为2.2.2.RELEASE，实际可根据需要自由选择）</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.2.2.RELEASE&lt;/version&gt;
+        &lt;relativePath/&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;org.yhzdys.demo&lt;/groupId&gt;
+    &lt;artifactId&gt;hello-spring-boot&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0.RELEASE&lt;/version&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre>
+<p> 接着，我们右键项目文件，选择“New”-&gt;“Directory”，新建名为“src/main/java”的目录，之后再“main”目录下新建名为“resources”的目录，最终效果如下图：<br>
+<img src="http://localhost:4000/post-images/1582014848952.png" alt="" loading="lazy"><br>
+<img src="http://localhost:4000/post-images/1582015011777.png" alt="" loading="lazy"><br>
+ 最后我们右键“java”目录，选择“New”-&gt;“Package”，新建名为项目groupId的包，本文的是“org.yhzdys.demo”，右键“demo”包，选择“New”-&gt;“Java Class”，新建名为“HelloSpringBootApplication”的类，使用注解“@SpringBootApplication”声明该项目为SpringBoot应用，最终效果如下图：<br>
+<img src="http://localhost:4000/post-images/1582015718813.png" alt="" loading="lazy"><br>
+ 为“HelloSpringBootApplication”类添加main方法作为项目的启动函数，如下图：</p>
+<pre><code>    public static void main(String[] arguments) {
+        SpringApplication.run(HelloSpringBootApplication.class, arguments);
+    }
+</code></pre>
+<p><img src="http://localhost:4000/post-images/1582015930131.png" alt="" loading="lazy"><br>
+ 右键main方法运行，一个最简单的集成tomcat的SpringBoot（默认端口：8080）应用程序便构建启动成功了：<br>
+<img src="http://localhost:4000/post-images/1582016035960.png" alt="" loading="lazy"></p>
+<h3 id="第四步添加一个controller">第四步添加一个Controller</h3>
+<p> SpringBoot默认扫描与“HelloSpringBootApplication”类同级及下级的包，所以切忌不要把代码放到“HelloSpringBootApplication”类的包级别之上（特殊需要除外）<br>
+ 接下来新建名为“web.controller”的包，“New”一个“TestCtroller”类，使用注解“@RestController”声明该类为Controller，并编写第一个测试接口:<br>
+<img src="http://localhost:4000/post-images/1582016410326.png" alt="" loading="lazy"></p>
+<pre><code>package org.yhzdys.demo.web.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TestController {
+
+    @GetMapping(value = &quot;hello&quot;)
+    public String hello() {
+        return &quot;hello world&quot;;
+    }
+
+}
+</code></pre>
+<p> 重新启动我们的项目，在浏览器中输入“http://localhost:8080/hello”，测试一下接口：<br>
+<img src="http://localhost:4000/post-images/1582016515552.png" alt="" loading="lazy"><br>
+<img src="http://localhost:4000/post-images/1582016611048.png" alt="" loading="lazy"><br>
+ 接口调用成功，大功告成！！！👏👏👏</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于本站]]></title>
+        <id>http://localhost:4000/about/</id>
+        <link href="http://localhost:4000/about/">
+        </link>
+        <updated>2017-07-18T00:20:48.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p> 欢迎来到我的博客呀，很高兴遇见你！😄</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p> 欢迎来到我的博客呀，很高兴遇见你！😄</p>
+</blockquote>
+<!-- more -->
+<h2 id="关于本站"><strong>🏠 关于本站</strong>：</h2>
+<p> 这里是yhzdys的博客，欢迎各位。</p>
+<h2 id="博主"><strong>👨‍💻 博主：</strong></h2>
+<p> 90后社畜、码农，家境贫寒，偶尔有点小想法。</p>
+<h2 id="联系我呀"><strong>📬 联系我呀：</strong></h2>
+<p> 微信号：yhzdys；QQ：1198520618</p>
+]]></content>
+    </entry>
+</feed>
