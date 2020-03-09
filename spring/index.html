@@ -2,14 +2,14 @@
 <html>
   <head>
       <meta charset="UTF-8"/>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="yhzsys,杜恒,Java,Spring,Dubbo,MySQL">
 <meta name="description" content="">
 <meta name="theme-color" content="#000">
 <title>yhzdys</title>
-<link rel="shortcut icon" href="http://www.yhzdys.com/favicon.ico?v=1582112232550">
-<link rel="stylesheet" href="http://www.yhzdys.com/styles/main.css">
-
+<link rel="shortcut icon" href="/favicon.ico?v=1583720667494">
+<link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -57,7 +57,8 @@
           
             <li class="nav-item ">
               
-                <a href="/">
+              
+                <a href="/" target="_self">
                   <i class="fa fa-home"></i> 首页
                 </a>
               
@@ -65,7 +66,8 @@
           
             <li class="nav-item ">
               
-                <a href="/archives">
+              
+                <a href="/archives" target="_self">
                   <i class="fa fa-archive"></i> 归档
                 </a>
               
@@ -73,7 +75,8 @@
           
             <li class="nav-item ">
               
-                <a href="/tags">
+              
+                <a href="/tags" target="_self">
                   <i class="fa fa-tags"></i> 标签
                 </a>
               
@@ -81,7 +84,8 @@
           
             <li class="nav-item ">
               
-                <a href="/about">
+              
+                <a href="/about" target="_self">
                   <i class="fa fa-globe"></i> 关于
                 </a>
               
@@ -124,13 +128,13 @@
       
       <div class="section-layout  gemini">
         <div class="section-layout-wrapper">
-          <div class="sidebar">
+          <div id="sidebarMeta" class="sidebar">
     
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="http://www.yhzdys.com/images/avatar.png"/>
     <p class="site-author-name">yhzdys</p>
-    <p class="site-description right-motion">这个人很懒，什么都不想写...</p>
+    <p class="site-description right-motion"></p>
   </div>
   <div class="sidebar-item side-item-stat right-motion">
     <div class="sidebar-item-box">
@@ -197,6 +201,20 @@
 
 </div>
 </div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
             <div class="section-box tag-line">
               <div class="box-shadow-wrapper">
                 <div class="bg-color">
@@ -264,7 +282,8 @@
       <div class="footer-box">
   <footer class="footer">
     <div class="copyright">
-      © 2017-2020 <i class="fa fa-snowflake-o"></i> yhzdys
+        <!-- Powered by <a href="https://github.com/yhzdys/yhzdys.github.io" target="_blank">yhzdys.github.io</a> | -->
+        © 2019-2020 yhzdys.com
     </div>
     <div class="poweredby">
       
@@ -325,7 +344,7 @@
   </div>
 </div>
 <div id="open_live2d">召唤伊斯特瓦尔</div>
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script>
 var message_Path = '/media/live2d/histoire/';
 let landlord = document.querySelector('#landlord');

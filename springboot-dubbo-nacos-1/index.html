@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8"/>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="yhzsys,杜恒,Java,Spring,Dubbo,MySQL">
 <meta name="description" content="">
 <meta name="theme-color" content="#000">
 <title>SpringBoot+Dubbo使用Nacos注册中心 | yhzdys</title>
-<link rel="shortcut icon" href="http://www.yhzdys.com/favicon.ico?v=1582112232550">
-<link rel="stylesheet" href="http://www.yhzdys.com/styles/main.css">
-
+<link rel="shortcut icon" href="/favicon.ico?v=1583720667494">
+<link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -59,7 +59,8 @@
           
             <li class="nav-item ">
               
-                <a href="/">
+              
+                <a href="/" target="_self">
                   <i class="fa fa-home"></i> 首页
                 </a>
               
@@ -67,7 +68,8 @@
           
             <li class="nav-item ">
               
-                <a href="/archives">
+              
+                <a href="/archives" target="_self">
                   <i class="fa fa-archive"></i> 归档
                 </a>
               
@@ -75,7 +77,8 @@
           
             <li class="nav-item ">
               
-                <a href="/tags">
+              
+                <a href="/tags" target="_self">
                   <i class="fa fa-tags"></i> 标签
                 </a>
               
@@ -83,7 +86,8 @@
           
             <li class="nav-item ">
               
-                <a href="/about">
+              
+                <a href="/about" target="_self">
                   <i class="fa fa-globe"></i> 关于
                 </a>
               
@@ -129,84 +133,7 @@
           
 
 <div class="sidebar">
-    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
-      
-      <div class="sidebar-body gemini" id="sidebar_body">
-        
-          
-<div class="sidebar-wrapper box-shadow-wrapper bg-color">
-  <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="http://www.yhzdys.com/images/avatar.png"/>
-    <p class="site-author-name">yhzdys</p>
-    <p class="site-description right-motion">这个人很懒，什么都不想写...</p>
-  </div>
-  <div class="sidebar-item side-item-stat right-motion">
-    <div class="sidebar-item-box">
-      <a href="/archives/">
-        
-        <span class="site-item-stat-count">5</span>
-        <span class="site-item-stat-name">文章</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count">6</span>
-        <span class="site-item-stat-name">分类</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="/tags/">
-        <span class="site-item-stat-count">6</span>
-        <span class="site-item-stat-name">标签</span>
-      </a>
-    </div>
-  </div>
   
-    
-      <div class="sidebar-item">
-        <span class="site-item-rss">
-            <i class="fa fa-rss"></i>
-            <a href="http://www.yhzdys.com/atom.xml" target="_blank">RSS</a>
-        </span>
-      </div>
-    
-  
-  
-    <div class="sidebar-item sidebar-item-social">
-      <div class="social-item">
-        
-          
-            <a href="https://github.com/yhzdys">
-              <i class="fa fa-github"></i> github
-            </a>
-          
-            <a href="https://weibo.com/u/5406972471">
-              <i class="fa fa-weibo"></i> weibo
-            </a>
-          
-        
-        
-          
-            <a class="social-img" href="#">
-              <img src="/media/images/custom-array-imgSocials-1581951146306-socialImg.JPG" />
-              <i class="fa fa-qq"></i> qq
-            </a>
-          
-            <a class="social-img" href="#">
-              <img src="/media/images/custom-array-imgSocials-1581951146308-socialImg.JPG" />
-              <i class="fa fa-weixin"></i> wechat
-            </a>
-          
-        
-      </div>
-    </div>
-  
-
-
-</div>
-        
-      </div>
-    </div>
 </div>
 <script>
   const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
@@ -259,35 +186,35 @@
     showElement.classList.add(SIDEBAR_BODY_ACTIVE);
   }
 
-  postToc.addEventListener('transitionend', function() {
+  postToc && postToc.addEventListener('transitionend', function() {
     this.classList.remove(SLIDE_UP_IN);
   });
 
-
-  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
-    let hasFix = false;
-    let scrollEl = document.querySelector('.main-continer');
-    let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
-    window.addEventListener('scroll', function(e) {
-    if (document.scrollingElement.scrollTop >= limitTop) {
-      if (!hasFix) {
-        sidebar.classList.add('sidebar-fixed');
-        hasFix = true;
-      }
-    } else {
-      if (hasFix) {
-        sidebar.classList.remove('sidebar-fixed');
-        hasFix = false;
-      }
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
     }
-  });
   }
   
 </script>
           <div class="section-box box-shadow-wrapper">
             <div class="section bg-color post post-page">
-              <div class="article-box">
-    <header class="post-header">
+              <header class="post-header">
   <h1 class="post-title">
     <a class="post-title-link" href="http://www.yhzdys.com/springboot-dubbo-nacos-1/">
       SpringBoot+Dubbo使用Nacos注册中心
@@ -336,9 +263,9 @@
       <i class="fa fa-file-word-o"></i>
       <span>40<span class="pc-show">字数</span></span>
     </span>
+    
   </div>
 </header>
-</div>
               <div class="post-body next-md-body" id="post_body">
                 <blockquote>
 <p> Alibaba Nacos为我们的分布式系统提供了一套完整的服务注册与发现、配置和管理的一站式解决方案</p>
@@ -389,6 +316,8 @@
   </div>
 </div>
               
+                
+              
             </div>
           </div>
         </div>
@@ -396,7 +325,8 @@
       <div class="footer-box">
   <footer class="footer">
     <div class="copyright">
-      © 2017-2020 <i class="fa fa-snowflake-o"></i> yhzdys
+        <!-- Powered by <a href="https://github.com/yhzdys/yhzdys.github.io" target="_blank">yhzdys.github.io</a> | -->
+        © 2019-2020 yhzdys.com
     </div>
     <div class="poweredby">
       
@@ -457,7 +387,7 @@
   </div>
 </div>
 <div id="open_live2d">召唤伊斯特瓦尔</div>
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script>
 var message_Path = '/media/live2d/histoire/';
 let landlord = document.querySelector('#landlord');

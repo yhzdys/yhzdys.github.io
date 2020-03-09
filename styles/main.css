@@ -318,6 +318,11 @@ blockquote:before {
 .bg-img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+.home-sidebar-fixed {
+  position: fixed !important;
+  top: 0px;
 }
 .footer-box {
   position: relative;
@@ -423,8 +428,8 @@ blockquote:before {
   border-top: 1px solid transparent;
 }
 .post-body img {
+  max-width: 100%;
   display: block;
-  width: 100%;
   overflow: hidden;
   background-size: cover;
   background-position: center;
