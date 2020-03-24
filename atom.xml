@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://www.yhzdys.com</id>
     <title>yhzdys</title>
-    <updated>2020-03-18T08:07:26.120Z</updated>
+    <updated>2020-03-24T09:33:46.336Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://www.yhzdys.com"/>
     <link rel="self" href="http://www.yhzdys.com/atom.xml"/>
@@ -156,14 +156,14 @@
   2、IDE：IntelliJ IDEA<br>
   3、Maven：3.X.X</p>
 <h3 id="第一步新建项目">第一步新建项目</h3>
-<p> 打开IDEA，我们可以选择“Create New Project”并使用Spring提供的Spring Initalizr工具初始化一个SpringBoot项目，但是为了更好照顾初学的朋友，并方便介绍maven的相关知识，本文不使用此种构建方式。<br>
+<p> 打开IDEA，我们可以选择“Create New Project”并使用Spring提供的Spring Initalizr工具初始化一个SpringBoot项目，本文选择使用手工构建的方式。<br>
 <img src="http://www.yhzdys.com/post-images/1582013349218.png" alt="" loading="lazy"><br>
- 这里我们新建一个空文件夹，并命名为项目名称，本文以“hello-spring-boot”为例。然后选择IDEA中的“Open”，选择新建的项目文件夹并打开：<br>
+ 新建一个空文件夹，并命名为项目名称，本文以“hello-spring-boot”为例。然后选择IDEA中的“Open”，选择新建的项目文件夹并打开：<br>
 <img src="http://www.yhzdys.com/post-images/1582013589127.png" alt="" loading="lazy"><br>
- 打开后就可以看到空空如也的项目，在你面前：<br>
+ 打开后就可以看到一个空项目：<br>
 <img src="http://www.yhzdys.com/post-images/1582013969121.png" alt="" loading="lazy"></p>
 <h3 id="第二步声明项目为maven项目">第二步声明项目为maven项目</h3>
-<p> 声明一个空项目为maven项目，很简单，我们右键项目目录，选择“New”-&gt;“File”，然后新建一个名为“pom.xml”的文件，并把如下代码复制到pom.xml：</p>
+<p> 声明一个空项目为maven项目，很简单，右键项目目录，选择“New”-&gt;“File”，然后新建一个名为“pom.xml”的文件，并把如下代码复制到pom.xml：</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
          xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
@@ -177,7 +177,7 @@
 <p> 打开pom.xml并右键，选择“Add as Maven Project”，到这里，一个最简单的maven项目就创建完成了。<br>
 <img src="http://www.yhzdys.com/post-images/1582017172157.png" alt="" loading="lazy"></p>
 <h3 id="第三步声明项目为springboot项目">第三步声明项目为SpringBoot项目</h3>
-<p> 修改pom.xml文件，使这个maven项目继承SpringBoot，并添加SpringBoot启动的web依赖，代码如下：（本文使用SpringBoot的版本为2.2.2.RELEASE，实际可根据需要自由选择）</p>
+<p> 修改pom.xml文件，使这个maven项目继承SpringBoot，并添加SpringBoot启动的web依赖，代码如下：（本文使用SpringBoot的版本为2.2.5.RELEASE，实际可根据需要自由选择）</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
          xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
@@ -185,7 +185,7 @@
     &lt;parent&gt;
         &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
         &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
-        &lt;version&gt;2.2.2.RELEASE&lt;/version&gt;
+        &lt;version&gt;2.2.5.RELEASE&lt;/version&gt;
         &lt;relativePath/&gt;
     &lt;/parent&gt;
     &lt;groupId&gt;org.yhzdys.demo&lt;/groupId&gt;
@@ -201,10 +201,10 @@
 
 &lt;/project&gt;
 </code></pre>
-<p> 接着，我们右键项目文件，选择“New”-&gt;“Directory”，新建名为“src/main/java”的目录，之后再“main”目录下新建名为“resources”的目录，最终效果如下图：<br>
+<p> 接着，右键项目文件，选择“New”-&gt;“Directory”，新建名为“src/main/java”的目录，之后再“main”目录下新建名为“resources”的目录，最终效果如下图：<br>
 <img src="http://www.yhzdys.com/post-images/1582014848952.png" alt="" loading="lazy"><br>
 <img src="http://www.yhzdys.com/post-images/1582015011777.png" alt="" loading="lazy"><br>
- 最后我们右键“java”目录，选择“New”-&gt;“Package”，新建名为项目groupId的包，本文的是“org.yhzdys.demo”，右键“demo”包，选择“New”-&gt;“Java Class”，新建名为“HelloSpringBootApplication”的类，使用注解“@SpringBootApplication”声明该项目为SpringBoot应用，最终效果如下图：<br>
+ 右键“java”目录，选择“New”-&gt;“Package”，新建名为项目groupId的包，本文的是“org.yhzdys.demo”，右键“demo”包，选择“New”-&gt;“Java Class”，新建名为“HelloSpringBootApplication”的类，使用注解“@SpringBootApplication”声明该项目为SpringBoot应用，最终效果如下图：<br>
 <img src="http://www.yhzdys.com/post-images/1582015718813.png" alt="" loading="lazy"><br>
  为“HelloSpringBootApplication”类添加main方法作为项目的启动函数，如下图：</p>
 <pre><code>    public static void main(String[] arguments) {
@@ -233,7 +233,7 @@ public class TestController {
 
 }
 </code></pre>
-<p> 重新启动我们的项目，在浏览器中输入“http://localhost:8080/hello”，测试一下接口：<br>
+<p> 重新启动项目，在浏览器中输入“http://localhost:8080/hello”，测试一下接口：<br>
 <img src="http://www.yhzdys.com/post-images/1582016515552.png" alt="" loading="lazy"><br>
 <img src="http://www.yhzdys.com/post-images/1582016611048.png" alt="" loading="lazy"><br>
  接口调用成功，大功告成！！！👏👏👏</p>
